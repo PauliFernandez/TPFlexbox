@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(44, 44, 44);;
+}
+
+a:visited, a:focus {
+  color: #7aa6ad;
+}
+
+a:hover {
+  color: #6d767d;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #b5d8ea;
+}
+
+header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+  box-shadow: inset 0 0 10px black;
+  border: 1px solid black;
+}
+
+header h1 {
+  font-size: 50px;
+}
+
+header h1 span {
+  color: white;
+  font-weight: bolder;
+}
+
+/* Barra de Navegacion */
+nav {
+  overflow: hidden;
+  background-color: #80a5ac;
+  display: flex;
+  align-items: center;
+}
+
+nav #menuMobile {
+  font-size: 100%;
+  margin: 10px;
+  margin-left: auto;
+  display: block;
+}
+
+nav #menuDesktop {
+  display: none;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+nav a:visited { 
+  color: #f2f2f2;
+}
+
+nav a:hover {
+  background-color: #cfd0db;
+  color: black;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+section#seccionPrimaria, section#seccionSecundaria {
+  padding: 0;
+}
+
+section h2 {   
+  font-size: xx-large;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+article {
+  box-shadow: inset 0 0 10px black;
+}
+
+article p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Seccion principal */
+section#seccionPrimaria p.metadata {   
+  color: grey;
+  text-align: right;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  font-size: x-small;
+  font-family: monospace;
+}
+
+/* Seccion secundaria */
+section#seccionSecundaria .imagen-articulo {
+  margin: 20px 0;
+}
+
+/* Imagenes */
+.imagen-articulo {
+  width: 100%;
+  height: auto;
+}
+
+.imagen-articulo img {
+  width: 100%;
+}
+
+article {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+
+main::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #80a5ac;
+  margin-top: 20px;
+}
+
+footer ul li {
+  margin: 20px 0;
+}
+
+footer ul li a {
+  color: white;
+}
+
+footer .copyright {
+  margin-top: 10px;
+  color: white;
+}
+
+/* Desktop layout */
+@media screen and (min-width: 800px) {
+  
+  nav #menuDesktop {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav #menuMobile {
+    display: none;
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  section#seccionPrimaria {   
+    width: 65%;
+  }
+
+  section#seccionSecundaria {   
+    width: 35%;
+    padding-left: 20px;
+  }
+
+  footer ul li {
+    display: inline;
+    margin: 0 20px;
+  }
+}
